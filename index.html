@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Care n Safe — Period Care, Indian Style 🌸</title>
+  <meta name="description" content="India's most trusted period care brand. Natural, affordable, and designed for every Indian woman.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================
+     NAVBAR
+     ============================================ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <!-- Mobile Menu Trigger -->
+    <button class="mobile-menu-btn" onclick="openMobileNav()" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+        </svg>
+      </div>
+      Care n Safe
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <ul class="nav-links" role="navigation" aria-label="Main navigation">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#build-box">Build a Box</a></li>
+      <li><a href="#features">Our Story</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+
+    <!-- Nav Actions -->
+    <div class="nav-actions">
+      <button class="btn-icon cart-btn" onclick="openCart()" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+          <path d="M3.103 6.034h17.794"/>
+          <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/>
+        </svg>
+        <span class="cart-badge" style="display:none"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     MOBILE NAV DRAWER
+     ============================================ -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <a href="#" class="logo">
+        <div class="logo-icon">🌿</div>
+        Care n Safe
+      </a>
+      <button class="btn-icon" onclick="closeMobileNav()" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links" aria-label="Mobile navigation">
+      <a href="#shop">🛍️ Shop</a>
+      <a href="#products">🌸 Products</a>
+      <a href="#build-box">📦 Build a Box</a>
+      <a href="#features">💚 Our Story</a>
+      <a href="#blog">📖 Blog</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ============================================
+     TRUST BAR / MARQUEE
+     ============================================ -->
+<div id="trust-bar" aria-label="Trust signals">
+  <div class="marquee-track" aria-hidden="true">
+    <!-- First set -->
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      100% Natural Ingredients
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      Dermatologist Tested
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      FSSAI Certified
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>
+      Free Shipping Above ₹499
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 10h16M4 14h8M4 18h8"/></svg>
+      Made in India 🇮🇳
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11.5V14h3v2H7v2.5l-4-4 4-4zM17 12.5V10h-3V8h3V5.5l4 4-4 4z"/></svg>
+      Easy Returns & Exchanges
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm.75-13.25v2.5h2.5v1.5h-2.5v2.5h-1.5v-2.5h-2.5v-1.5h2.5v-2.5h1.5z"/></svg>
+      1M+ Happy Customers
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      100% Natural Ingredients
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      Dermatologist Tested
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      FSSAI Certified
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>
+      Free Shipping Above ₹499
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 10h16M4 14h8M4 18h8"/></svg>
+      Made in India 🇮🇳
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 11.5V14h3v2H7v2.5l-4-4 4-4zM17 12.5V10h-3V8h3V5.5l4 4-4 4z"/></svg>
+      Easy Returns & Exchanges
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm.75-13.25v2.5h2.5v1.5h-2.5v2.5h-1.5v-2.5h-2.5v-1.5h2.5v-2.5h1.5z"/></svg>
+      1M+ Happy Customers
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     HERO SECTION
+     ============================================ -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg-circle hero-bg-circle-1"></div>
+  <div class="hero-bg-circle hero-bg-circle-2"></div>
+
+  <div class="hero-inner">
+    <!-- Left Content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        India's #1 Period Care Brand
+      </div>
+
+      <h1 class="hero-title">
+        Period Care,<br>
+        <em>Naturally</em> Done Right
+      </h1>
+
+      <p class="hero-subtitle">
+        Premium organic period products crafted for Indian women. 
+        Gentle on your body, kind to the environment, and easy on your pocket.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-primary">
+          Shop Now
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#build-box" class="btn btn-outline">Build Your Box</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <strong><span class="stat-count" data-target="10" data-suffix="L+">10L+</span></strong>
+          <span>Women served</span>
+        </div>
+        <div class="stat-item">
+          <strong><span class="stat-count" data-target="500" data-suffix="+">500+</span></strong>
+          <span>Cities across India</span>
+        </div>
+        <div class="stat-item">
+          <strong>4.8★</strong>
+          <span>Average rating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Visual -->
+    <div class="hero-image-wrap">
+      <div class="hero-float-card top-left">
+        <div class="hero-float-icon" style="background:#d4ead9">🌿</div>
+        <div>
+          <div style="font-size:0.75rem;color:var(--text-muted)">100% Organic</div>
+          <div>Cotton certified</div>
+        </div>
+      </div>
+
+      <div class="hero-flower" role="img" aria-label="Happy Indian woman feeling confident">
+        <img src="Image-4.jpg" 
+        alt="Smiling young woman in pink sweater representing confidence and comfort" 
+        style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+      </div>
+
+      <div class="hero-float-card bottom-right">
+        <div class="hero-float-icon" style="background:#fce4e8">❤️</div>
+        <div>
+          <div style="font-size:0.75rem;color:var(--text-muted)">Starting at</div>
+          <div style="color:var(--accent)">₹499/month</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SHOP / PRODUCTS SECTION
+     ============================================ -->
+<section id="shop" style="padding-top:0">
+  <section id="products" style="padding:96px 0">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Products</div>
+        <h2 class="section-title">Everything You Need</h2>
+        <p class="section-desc">From daily liners to menstrual cups — find what works perfectly for you.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Product categories">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Products</button>
+        <button class="filter-tab" data-filter="pads" role="tab">Pads</button>
+        <button class="filter-tab" data-filter="tampons" role="tab">Tampons</button>
+        <button class="filter-tab" data-filter="cups" role="tab">Cups</button>
+        <button class="filter-tab" data-filter="liners" role="tab">Liners</button>
+        <button class="filter-tab" data-filter="discs" role="tab">Discs</button>
+      </div>
+
+      <!-- Products Grid (rendered by JS) -->
+      <div class="products-grid" id="products-grid" role="list" aria-label="Products"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================
+     BUILD A BOX SECTION
+     ============================================ -->
+<section id="build-box">
+  <!-- Background circles -->
+  <div class="build-box-bg">
+    <div class="build-box-circle" style="width:400px;height:400px;background:radial-gradient(circle,rgba(192,92,26,0.1)0%,transparent 70%);top:-100px;right:-100px;position:absolute;border-radius:50%;pointer-events:none;"></div>
+    <div class="build-box-circle" style="width:300px;height:300px;background:radial-gradient(circle,rgba(232,100,122,0.08)0%,transparent 70%);bottom:0;left:-50px;position:absolute;border-radius:50%;pointer-events:none;"></div>
+  </div>
+
+  <div class="container">
+    <div class="build-box-inner">
+      <!-- Left Text -->
+      <div>
+        <div class="section-label" style="color:var(--accent-light)">Build a Box</div>
+        <h2 class="section-title" style="color:white">Your Period,<br>Your Box</h2>
+        <p style="color:rgba(255,255,255,0.65);max-width:460px;line-height:1.7;margin-bottom:36px;">
+          Customize your monthly period care kit. Choose your products, set your flow type, 
+          and we'll deliver every month right to your door — at prices that make sense for India.
+        </p>
+
+        <div class="build-box-steps">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Choose your products</h4>
+              <p>Mix and match pads, tampons, cups, or liners based on your flow.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Pick your delivery</h4>
+              <p>Monthly or quarterly — we ship pan-India with free delivery above ₹499.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Relax and receive</h4>
+              <p>Your personalised box arrives before your period. Every single time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual -->
+      <div class="box-visual">
+        <div class="box-3d" role="img" aria-label="Period care box">📦</div>
+
+        <div class="box-pricing-cards">
+          <div class="pricing-mini selected" role="button" tabindex="0">
+            <div class="price-label">Monthly</div>
+            <div class="price-value">₹799</div>
+            <div class="price-note">15 items/box</div>
+          </div>
+          <div class="pricing-mini" role="button" tabindex="0">
+            <div class="price-label">Quarterly</div>
+            <div class="price-value">₹2,099</div>
+            <div class="price-note">Save ₹300!</div>
+          </div>
+          <div class="pricing-mini" role="button" tabindex="0">
+            <div class="price-label">Half-Yearly</div>
+            <div class="price-value">₹3,899</div>
+            <div class="price-note">Best value</div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" onclick="buildBoxCheckout()" style="width:100%;max-width:360px;justify-content:center;">
+          Start Building My Box
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);text-align:center;">Cancel anytime · No hidden charges</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FEATURES / WHY CARE N SAFE
+     ============================================ -->
+<section id="features">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Made for Indian Women,<br>By Indian Women</h2>
+      <p class="section-desc">We understand what matters most — safety, comfort, and affordability. That's our promise.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#d4ead9">🌿</div>
+        <h3>100% Organic Cotton</h3>
+        <p>No harmful chemicals, no synthetic fragrances. Pure cotton that's gentle on sensitive skin and safe for your body.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fce4e8">🩺</div>
+        <h3>Dermatologist Approved</h3>
+        <p>Tested and approved by leading dermatologists across India. Safe for all skin types, including sensitive skin.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:var(--accent-pale)">🇮🇳</div>
+        <h3>Proudly Made in India</h3>
+        <p>Manufactured in state-of-the-art facilities in India. Supporting Indian workers while delivering world-class quality.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fdecd8">♻️</div>
+        <h3>Eco-Friendly Packaging</h3>
+        <p>100% biodegradable packaging. We care for the planet as much as we care for you. Zero plastic, zero guilt.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#d4ead9">💰</div>
+        <h3>Affordable for All</h3>
+        <p>Period care shouldn't be a luxury. Our prices are designed to make quality period products accessible across India.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fce4e8">🚚</div>
+        <h3>Discreet Delivery</h3>
+        <p>Plain, unmarked packaging delivered to 500+ cities across India. Privacy guaranteed, always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Real Reviews</div>
+      <h2 class="section-title">Loved Across India</h2>
+      <p class="section-desc">Over 10 lakh Indian women trust Care n Safe for their period care every month.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Finally a period product that doesn't irritate my skin! The organic cotton pads are so soft and comfortable. Switching to Care n Safe was the best decision I made."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:var(--pink-light)">👩</div>
+          <div>
+            <div class="author-name">Priya Sharma</div>
+            <div class="author-location">Mumbai, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The menstrual cup changed my life! No more buying products every month. The quality is amazing and customer support is very helpful. Highly recommend to all."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:var(--green-light)">👩‍🦱</div>
+          <div>
+            <div class="author-name">Ananya Krishnan</div>
+            <div class="author-location">Bangalore, Karnataka</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Monthly subscription is so convenient! The box arrives on time and the products are exactly what I need. Affordable prices compared to MRPs in shops. Will continue!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:var(--accent-pale)">👩‍🦰</div>
+          <div>
+            <div class="author-name">Fatima Begum</div>
+            <div class="author-location">Hyderabad, Telangana</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I was skeptical at first about switching from my regular brand, but Care n Safe organic tampons are a game changer. No more worrying about chemicals."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:#fce4e8">👩‍🦱</div>
+          <div>
+            <div class="author-name">Sneha Patel</div>
+            <div class="author-location">Ahmedabad, Gujarat</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Delivery is very fast and packaging is so cute and discreet. My family didn't even know what I ordered. Products are excellent quality. Genuinely impressed!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:var(--green-light)">👩</div>
+          <div>
+            <div class="author-name">Deepika Reddy</div>
+            <div class="author-location">Chennai, Tamil Nadu</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Best period care brand in India! The overnight pads are super thick and don't leak even on heavy flow days. I've recommended to all my friends and colleagues."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:var(--accent-pale)">👩‍🦳</div>
+          <div>
+            <div class="author-name">Kavita Singh</div>
+            <div class="author-location">Delhi, NCR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     BLOG / EDUCATION SECTION
+     ============================================ -->
+<section id="blog">
+  <div class="container">
+    <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;">
+      <div>
+        <div class="section-label">Learn & Grow</div>
+        <h2 class="section-title">Period Wellness Hub</h2>
+        <p class="section-desc">Honest, science-backed articles for every Indian woman.</p>
+      </div>
+      <a href="#" class="btn btn-outline btn-sm">View All Articles →</a>
+    </div>
+
+    <div class="blog-grid">
+  <article class="blog-card">
+    <div class="blog-image">
+      <img src="Image-5.jpg">
+           alt="Indian woman learning about menstrual cup" 
+           class="blog-img">
+    </div>
+    <div class="blog-body">
+      <span class="blog-tag">Health Guide</span>
+      <h3 class="blog-title">Menstrual Cup Guide: Everything Indian Women Need to Know</h3>
+      <p class="blog-excerpt">Thinking of switching to a menstrual cup? Here's our complete guide tailored for Indian lifestyle and water quality...</p>
+      <div class="blog-meta">
+        <span>📅 Mar 10, 2026</span>
+        <span>⏱ 8 min read</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="blog-card">
+    <div class="blog-image">
+      <img src="Image-6.jpg">
+    </div>
+    <div class="blog-body">
+      <span class="blog-tag">Wellness</span>
+      <h3 class="blog-title">Why Organic Cotton Matters: The Hidden Truth About Synthetic Pads</h3>
+      <p class="blog-excerpt">What's really in your regular sanitary pad? A deep dive into the chemicals and why organic cotton is safer...</p>
+      <div class="blog-meta">
+        <span>📅 Feb 28, 2026</span>
+        <span>⏱ 6 min read</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="blog-card">
+    <div class="blog-image">
+      <img src="Image-7.jpg">
+    </div>
+    <div class="blog-body">
+      <span class="blog-tag">Lifestyle</span>
+      <h3 class="blog-title">Period Pain Relief: 10 Ayurvedic Remedies That Actually Work</h3>
+      <p class="blog-excerpt">From ginger chai to yoga asanas — traditional Indian remedies that can help manage menstrual cramps naturally...</p>
+      <div class="blog-meta">
+        <span>📅 Feb 15, 2026</span>
+        <span>⏱ 7 min read</span>
+      </div>
+    </div>
+  </article>
+</div>
+  </div>
+</section>
+
+<!-- ============================================
+     NEWSLETTER SECTION
+     ============================================ -->
+<section id="newsletter">
+  <div class="container">
+    <div class="section-label" style="color:rgba(255,255,255,0.7)">Stay in the Loop</div>
+    <h2 class="section-title">Get ₹100 Off Your First Order</h2>
+    <p class="section-desc">Subscribe to our newsletter for exclusive offers, period health tips, and early access to new launches.</p>
+
+    <form class="newsletter-form" id="newsletter-form" novalidate>
+      <input
+        type="email"
+        class="newsletter-input"
+        placeholder="Enter your email address"
+        aria-label="Email address"
+        required>
+      <button type="submit" class="btn">
+        Subscribe & Save ₹100
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </form>
+    <p class="newsletter-note">No spam, we promise. Unsubscribe anytime. 🔒 Your data stays with us.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+          <footer>
+            <div class="container">
+              <div class="footer-grid">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="Image-8.jpeg" 
+               alt="Care n Safe Logo" 
+               class="logo-image">
+          Care n Safe
+        </div>
+        <p class="footer-desc">
+          India's most trusted period care brand. Natural ingredients, honest prices, 
+          and a commitment to every Indian woman's health and comfort since 2021.
+        </p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+          <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+
+      <!-- Shop Links -->
+      <div>
+        <h4 class="footer-heading">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="#products">Sanitary Pads</a></li>
+          <li><a href="#products">Tampons</a></li>
+          <li><a href="#products">Menstrual Cups</a></li>
+          <li><a href="#products">Pantyliners</a></li>
+          <li><a href="#build-box">Build a Box</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Links -->
+      <div>
+        <h4 class="footer-heading">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Track My Order</a></li>
+        </ul>
+        <div style="margin-top:20px;font-size:0.85rem;color:rgba(255,255,255,0.5);">
+          <div>📞 +91 1800-CARE-NS</div>
+          <div style="margin-top:6px;">✉️ hello@carensafe.in</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div>© 2026 Care n Safe India Pvt. Ltd. All rights reserved. Made with ❤️ in India 🇮🇳</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     CART DRAWER
+     ============================================ -->
+<div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h2 class="cart-title">Your Cart 🛍️</h2>
+    <button class="cart-close" onclick="closeCart()" aria-label="Close cart">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="cart-items" id="cart-items-container" aria-live="polite">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛍️</div>
+      <p>Your cart is empty.<br>Add some items to get started!</p>
+    </div>
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <span id="cart-subtotal">₹0.00</span>
+    </div>
+    <div class="cart-subtotal">
+      <span>Shipping</span>
+      <span id="cart-shipping">₹49.00</span>
+    </div>
+    <div class="cart-subtotal" style="font-size:0.75rem;color:#4a7c59;">
+      <span>Free shipping on orders ₹499+</span>
+    </div>
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cart-total">₹0.00</span>
+    </div>
+    <button class="cart-checkout" onclick="showToast('Redirecting to checkout... 🚀','success')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+      </svg>
+      Proceed to Checkout
+    </button>
+    <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:12px;">
+      🔒 Secure checkout · UPI, Cards & Net Banking accepted
+    </p>
+  </div>
+</aside>
+
+<!-- ============================================
+     TOAST CONTAINER
+     ============================================ -->
+<div class="toast-container" id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+<!-- ============================================
+     SCROLL TO TOP BUTTON
+     ============================================ -->
+<button class="scroll-top-btn" id="scroll-top" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
